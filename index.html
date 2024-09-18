@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Coffee Cafe</title>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    
+            <div class=navbar>
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contactUs">Contact</a>
+            </div>
+            <div id="home" class="bg_img">
+                <img src="/assets/home_bg_img/liana-mikah-L5cEmk3ucYY-unsplash.jpg" alt="coffee_logo">
+                <span>Start Your Day <br> With a Good <br> Coffee!</span>
+            </div>
+
+            <!-- MENU SECTION -->
+
+            <div id="menu" class="menu">
+                
+                <div class="coffee">
+                    <img src="/assets/menu/vanilla latte.png" alt="vanilla latte">
+                
+                    <div class="coffeeName">
+                    <p>Vanilla Latte</p>
+                    <p class="price">Rs.1500</p>
+                </div>
+
+                <div class="buttons">
+                    <button id="addToBag" onclick="addToBag(0)">Add to Bag</button>
+                    
+                </div>
+                
+                </div>
+
+                <!-- Coffee Image -->
+                <div class="coffee">
+                    <img src="/assets/menu/espresso.png" alt="vanilla latte">
+                <div class="coffeeName">
+                    <p>Espresso</p>
+                    <p class="price">Rs.1000</p>
+                </div>
+
+                <!-- Add to bag -->
+                <div class="buttons">
+                    <button onclick="addToBag(1)">Add to Bag</button>
+                </div>
+                </div>
+
+                <div class="coffee">
+                    <img src="/assets/menu/cappuccino.png" alt="vanilla latte">
+                <div class="coffeeName">
+                    <p>cappuccino</p>
+                    <p class="price">Rs.2500</p>
+                </div>
+
+                <div class="buttons">
+                    <button onclick="addToBag(2)">Add to Bag</button>
+            
+           
+                </div>
+
+                </div>
+
+            </div>
+
+            <!-- Section View Bag -->
+            <div id="viewBag">
+
+                <!-- openBag() -> visible modal box -->
+                <button onclick="openBag()">View Bag</button>
+
+                 <!-- Modal Box -->
+            <div id="orderModal" class="modalBox">
+                <div class="orderDetails">
+                    <h2>Product Details</h2>
+
+                    <!-- closeBag() -> hide modal box -->
+                    <button id=""  onclick="closeBag()">Close</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- SLIDER -->
+             <div class="slider">
+                <h1 style="color: rgb(179, 28, 28);">Coffee Flavors</h1>
+                <div class="sliderImgs">
+                <img class="image" src="/assets/slider_imgs/flavor1.png" alt="Flavor_1">
+                <img class="image" src="/assets/slider_imgs/flavor2.png" alt="Flavor_2">
+                <img class="image" src="/assets/slider_imgs/flavor3.png" alt="Flavor_3">
+                <img class="image" src="/assets/slider_imgs/flavor4.png" alt="Flavor_4">
+                <img class="image" src="/assets/slider_imgs/flavor5.png" alt="Flavor_5">
+                </div>
+                <button class="previous" onclick="previousBtn()">&#10094</button>
+                <button class="next" onclick="nextBtn()">&#10095</button>
+
+             </div>
+
+             <!-- ACCORDIAN -->
+
+             <div id="contactUs" class="accordian">
+                <div class="header">
+                    Contact Us
+                </div>
+                
+                <div class="content">
+                    <p>+92 3221723822</p>
+                    <p>coffeecafe@gmail.com</p>
+                </div>
+             </div>
+            <script src="script.js"></script>
+
+            <div class="footer"></div>
+
+</body>
+</html>

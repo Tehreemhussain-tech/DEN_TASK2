@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    font-size: 14px;
+}
+
+.navbar{
+    display: flex;
+    /* padding: 0.5rem; */
+    width: 100%;
+    height: auto;
+    /* border: 2px solid black; */
+    margin: 5rem auto; 
+    text-align: center;
+    border-radius: 10px;  
+    background-color: #f0f0f0;
+    justify-content: space-around;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(179, 28, 28);
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.navbar a:hover {  
+    color: rgb(255, 0, 0);   
+    transform: scale(1.05);   
+}  
+
+.bg_img{
+    margin: 2rem auto;
+    display: flex;
+    width: 80%;
+    /* max-height: 23rem; */
+    justify-content: center;
+    /* align-content: center; */
+    /* border: 2px solid black; */
+}
+
+.bg_img img{
+    
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+
+}
+
+.bg_img span{
+    font-family: cursive;
+    font-size: 1.8rem;
+    margin: 0.5rem;
+    color: rgb(179, 28, 28);
+}
+
+/*  MENU SECTION  */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid pink; */
+    /* border-radius: 1rem; */
+    padding: 1rem;
+    background-color: #fafafa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* border-radius: 0.5rem 0.5rem 0 0; */
+    margin: 8rem auto;
+    width: 90%;
+    /* height: auto; */
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.coffee{
+    width: 100%;
+    /* height: auto; */
+    /* border: 2px solid purple; */
+}
+
+.menu img{
+    width: 100%;
+    /* border-radius: 0rem 0rem 0.2rem 0.2rem; */
+}
+
+.coffeeName{
+    display: flex;
+    /* width: 12.7rem; */
+    /* height: auto; */
+    /* border: 2px solid rgb(110, 149, 149); */
+    justify-content: space-between;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.buttons{
+    display: flex;
+    /* width: 12.7rem; */
+    /* height: auto; */
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+
+/* View Bag */
+
+#viewBag{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 5rem auto;
+    /* width: 20rem;
+    height: 11rem; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewBag button{
+    width: 8rem;
+    height: 4rem;
+}
+
+
+/* Modal Box */
+
+.modalBox{
+
+    /* display: none; -> not worked -> flex property */
+    display: none;  
+    /* display: flex; */
+    position: absolute;
+    /* on top of the view bag button */
+    z-index: 1; 
+    /* top: 0; */
+    left: 0;
+
+    /* modal form horizontally vertically center */
+    /* scale(0.2) -> make it small */
+    transform: translate(-50%) scale(0.2);
+    /* flex-direction: column; */
+    width: 16rem;
+    height: 10rem;
+    border: 3px solid rgb(202, 95, 113);
+    /* padding-top: 1rem 1rem; */
+    background-color: rgb(251, 220, 220);
+    overflow-y: scroll;
+}
+
+.showBag{
+    /* visibility: visible; */
+    display: flex;
+    left: 50%;
+    /* scale(1) -> original size of modal box */
+    transform: translate(-50%)  scale(1);
+    opacity: 1;
+}
+
+.orderDetails{
+    /* border: 1px solid purple; */
+    display: flex;
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0.5rem;
+}
+
+/* close bag */
+.orderDetails button{
+    /* position: absolute;  */
+    bottom: 0.5rem; 
+    left: 0.5rem; 
+    padding: 0.3rem 0.8rem; 
+    /* background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 2; */
+}
+
+.itemDetails {
+    /* Style each item in the bag */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Slider */
+
+.slider{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid pink; */
+    margin: 8rem auto;
+    width: 100%;
+    height: auto;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 1rem; */
+    overflow: hidden; 
+}
+
+.sliderImgs{
+    display: flex;
+    border: 2px solid rgb(196, 53, 77);
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+}
+
+.sliderImgs img{
+    display: none;
+}
+
+/* select all slide images */
+img.showSlide{
+    display: block;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    font-size: 1.2rem;
+    width: 10%;
+    cursor: pointer;
+}
+
+.previous{
+    left: 0%;
+}
+
+.next{
+    right: 0%;
+}
+
+/* accordian */
+.accordian{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgb(181, 9, 37); */
+    margin: 5rem auto;
+    width: 90%;
+    height: auto;
+    padding: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);;   
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: auto;    
+    /* border: 1px solid rgb(179, 36, 60); */
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content{
+    width: 100%;
+    height: auto;    
+    /* border: 1px solid rgb(179, 36, 60); */
+    padding: 0.5rem;
+    display: none;
+    line-height: 2rem;
+}
+
+.accordian.active .content{
+    display: block;    
+}
+
+/* FOOTER */
+.footer{
+    /* margin-top: 1rem; */
+    width: 100%;
+    height: 2rem;
+    /* border: 2px solid; */
+    background-color: rgb(130, 11, 63);    
+}
+
+/* MEDIA QUERIES */
+
+/* Screens >= 576px */
+@media only screen and (min-width: 576px){
+    body{
+        font-size: 15px;
+    }
+
+    .navbar{
+        width: 25rem;
+    }
+
+    .bg_img img{
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .menu{
+        width: 70%;
+        justify-content: space-between;
+        gap: 2rem; 
+   }
+
+    .modalBox{
+        width: 18rem;
+        height: 12rem;
+    }
+
+    #viewBag button{
+        width: 9rem;
+    }
+
+}
+
+/* Screens >= 768px */
+@media only screen and (min-width: 768px){
+    body{
+        font-size: 16px;
+    }
+
+    .navbar{
+        width: 30rem;
+    }
+
+    .bg_img img{
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .menu{
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .modalBox{
+        width: 20rem;
+        height: 13rem;
+    }
+
+    #viewBag button{
+        width: 10rem;
+    }
+
+}
+
+/* Screens >= 992px */
+@media only screen and (min-width: 992px){
+   
+    .navbar{
+        width: 35rem;
+    }
+
+    .bg_img img{
+        width: 16rem;
+        height: 16rem;
+        
+    }
+
+    .menu{
+        width: 85%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .modalBox{
+        width: 22rem;
+        height: 15rem;
+    }
+
+    #viewBag button{
+        width: 11rem;
+    }
+
+}
+
+/* Screens >= 1200px */
+@media only screen and (min-width: 1200px){
+    
+    .navbar{
+        width: 40rem;
+    }
+
+    .bg_img img{
+        width: 18rem;
+        height: 18rem;
+        
+    }
+
+    .menu{
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .modalBox{
+        width: 24rem;
+        height: 16rem;
+    }
+
+    /* #viewBag button{
+        width: 9rem;
+    } */
+
+}
+
+/* Screens >= 1600px */
+@media only screen and (min-width: 1600px){
+    body{
+        font-size: 18px;
+    }
+
+    .navbar{
+        width: 50rem;
+    }
+
+    .bg_img img{
+        width: 20rem;
+        height: 20rem;
+        gap: 1rem;
+    }
+
+    .menu{
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .modalBox{
+        width: 26rem;
+        height: 18rem;
+    }
+
+    /* #viewBag button{
+        width: 9rem;
+    } */
+
+}
+
+/* Screens >= 2800px */
+@media only screen and (min-width: 2800px){
+    body{
+        font-size: 20px;
+    }
+
+    .navbar{
+        width: 60rem;
+    }
+
+    .bg_img img{
+        width: 24rem;
+        height: 24rem;
+        gap: 1rem;
+    }
+
+    .menu{
+        width: 98%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .modalBox{
+        width: 28rem;
+        height: 20rem;
+    }
+
+}
